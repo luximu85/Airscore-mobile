@@ -1,0 +1,8 @@
+.state-waypoint {
+  &__action {
+    flex-grow: 1;
+    &.p-button {
+      display: block;
+    }
+  }
+}

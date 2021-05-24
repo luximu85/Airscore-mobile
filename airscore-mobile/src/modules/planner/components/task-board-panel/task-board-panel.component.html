@@ -1,0 +1,20 @@
+<p-panel [id]="'idTaskBoardPanel'"
+         [showHeader]="true"
+         [toggleable]="true"
+         [toggler]="'header'"
+         [transitionOptions]="'400ms cubic-bezier(0.86, 0, 0.07, 1)'"
+         [collapsed]="false">
+  <ng-template pTemplate="header">
+      <div class="p-d-flex p-jc-between" style="width: 100%">
+        <div>
+          <span>TaskBoard</span>
+        </div>
+        <div *ngIf="routeTask?.pointsRouteOptimized?.length! >=2">
+          <span>Distance: {{routeTask?.distanceOptimized | meterToKm: 2}}</span>
+        </div>
+      </div>
+  </ng-template>
+  <div class="p-d-flex p-jc-center">
+    TaskBoard content
+  </div>
+</p-panel>

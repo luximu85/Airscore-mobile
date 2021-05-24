@@ -1,0 +1,37 @@
+<p-panel [id]="'idStateWaypointPanel'"
+         [showHeader]="true"
+         [toggleable]="true"
+         [toggler]="'header'"
+         [transitionOptions]="'400ms cubic-bezier(0.86, 0, 0.07, 1)'"
+         [collapsed]="true">
+  <ng-template pTemplate="header">
+    <span>Waypoint: {{waypointSelected?.cod}} - {{waypointSelected?.desc}}</span>
+  </ng-template>
+  <div class="p-d-flex p-jc-center">
+    <button pButton class="state-waypoint__action p-link p-m-1"
+            [ngClass]="{'p-button-success': waypointSelected?.active && waypointSelected?.state === _turnpointEnum.CYLINDER}"
+            (click)="changeStatusWaypoint(_turnpointEnum.CYLINDER)">
+      <span class="">CYLINDER</span>
+    </button>
+    <button pButton class="state-waypoint__action p-link p-m-1"
+            [ngClass]="{'p-button-success': waypointSelected?.active && waypointSelected?.state === _turnpointEnum.TAKE_OFF}"
+            (click)="changeStatusWaypoint(_turnpointEnum.TAKE_OFF)">
+      <span class="">TAKE-OFF</span>
+    </button>
+    <button pButton class="state-waypoint__action p-link p-m-1"
+            [ngClass]="{'p-button-success': waypointSelected?.active && waypointSelected?.state === _turnpointEnum.SSS}"
+            (click)="changeStatusWaypoint(_turnpointEnum.SSS)">
+      <span class="">SSS</span>
+    </button>
+    <button pButton class="state-waypoint__action p-link p-m-1"
+            [ngClass]="{'p-button-success': waypointSelected?.active && waypointSelected?.state === _turnpointEnum.ESS}"
+            (click)="changeStatusWaypoint(_turnpointEnum.ESS)">
+      <span class="">ESS</span>
+    </button>
+    <button pButton class="state-waypoint__action p-link p-m-1"
+            [ngClass]="{'p-button-success': waypointSelected?.active && waypointSelected?.state === _turnpointEnum.GOAL}"
+            (click)="changeStatusWaypoint(_turnpointEnum.GOAL)">
+      <span class="">GOAL</span>
+    </button>
+  </div>
+</p-panel>

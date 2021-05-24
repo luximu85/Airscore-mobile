@@ -1,0 +1,49 @@
+.task-planner {
+  &__container{
+    //height: 800px;
+    //width: 100%;
+    position: relative;
+  }
+  &__map {
+    height: 800px;
+    width: 100%;
+    position: absolute;
+  }
+}
+
+::ng-deep .control-zoom{
+  width: 50px;
+  height: 100px;
+  margin-top: 1%;
+  display: inline-grid;
+  margin-left: 95%;
+}
+::ng-deep .control-zoom button{
+  background-color: var(--surface-a);
+  color: var(--text-color);;
+  border-radius: 20%;
+  font-weight: 600;
+  font-size: 26px;
+  margin: 2px;
+}
+
+.state-waypoint {
+  &__container {
+    width: 100%;
+  }
+}
+
+.task-board {
+  &__container {
+    width: 100%;
+  }
+}
+
+.panel {
+  &__container {
+    position: absolute;
+    width: 360px;
+    height: 640px;
+    z-index: 1000;
+  }
+}

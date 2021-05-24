@@ -1,0 +1,18 @@
+<div class="p-d-flex p-align-center p-justify-between">
+  <div class="layout-topbar">
+    <ul #topbarMenu class="topbar-menu">
+      <li><a [routerLink]="['/boa']">Boa</a></li>
+      <li><a [routerLink]="['/planner']">Task Planner</a></li>
+    </ul>
+  </div>
+
+  <div class="p-pl-4 p-pr-4">
+    <p-selectButton [options]="langs"
+                    [(ngModel)]="selectedLang"
+                    (ngModelChange)="useLanguage($event)"
+                    optionLabel="name"
+    ></p-selectButton>
+  </div>
+</div>
+
+
